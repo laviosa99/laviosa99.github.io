@@ -1,0 +1,84 @@
+.App {
+  display: flex;
+  background-color: #f9f0ff;
+}
+
+
+.Navbar {
+  width: 200px;
+  background-color: #eeceef;
+  padding: 40px;
+}
+
+.MainContent {
+  margin-left: 400px;  /* same as navbar width */
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* top-aligned, change to center if you want vertical centering */
+  text-align: center;
+  min-width: 700px; /* ensure it doesn't shrink too much */
+  background-color: #f9f0ff;
+
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f0ff; /* light purple */
+}
+
+
+
+.column {
+  display: flex;
+  justify-content: center; /* center the images as a group */
+  gap: 10px;               /* optional spacing between images */
+  flex-wrap: wrap;         /* allow wrapping on small screens */
+}
+
+.column img {
+  width: 50%;              /* adjust as needed */
+  margin: 5px;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  color: #9675f6;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1d0958;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f9f0ff;
+}
+
+.App-link {
+  color: #9675f6;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
