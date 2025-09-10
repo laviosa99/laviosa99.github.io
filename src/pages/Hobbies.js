@@ -14,6 +14,10 @@ function Hobbies() {
         I love baking bread, cakes, and pastries. I try to post my creations on Instagram, follow me at <a href="https://www.instagram.com/themidnightbreadery/">@themidnightbreadery</a>!
       </p>
       <img src="instashot.png" alt="The Midnight Breadery Instagram" style={{ width: '500px', margin: '10px' }} />
+      <p>
+        Most recently, I made a wedding cake for a friend. As a casual home baker, this was a rewarding challenge to take on. It's a three-tiered cake with handmade fondant flowers. 
+      </p>
+      <img src="weddingcake.jpg" alt="Wedding Cake" style={{ width: '500px', margin: '10px' }} />
 
       <h2>Recent Travels</h2>
       <div className="column">
