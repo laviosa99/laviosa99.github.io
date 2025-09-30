@@ -1,5 +1,5 @@
-import '../App.css';
-import React, { useState } from "react";
+import "../App.css";
+import { useState } from "react";
 
 function HydrationApp() {
   const [weight, setWeight] = useState("");
@@ -15,13 +15,15 @@ function HydrationApp() {
     { name: "Juice", multiplier: 1 },
     { name: "Soda", multiplier: 1 },
     { name: "Milk", multiplier: 1 },
+    { name: "Broth", multiplier: 1 },
+    { name: "Seltzer", multiplier: 1 },
   ];
-  
+
   const amounts = [4, 8, 12, 16, 20, 24, 28, 32, 46, 40]; // in ounces
 
   const calculateDailyGoal = (weight) => {
     return Math.round(weight * 0.5); // in ounces
-  }
+  };
 
   const handleWeightChange = (e) => {
     const newWeight = e.target.value;
@@ -29,36 +31,41 @@ function HydrationApp() {
     const goal = calculateDailyGoal(newWeight);
     setDailyGoal(goal);
     setRemaining(goal);
-  }
+  };
 
   const handleBeverageChange = (e) => {
     setSelectedBeverage(e.target.value);
-  }
+  };
 
   const handleAmountChange = (e) => {
     setSelectedAmount(parseInt(e.target.value));
-  }
+  };
 
   const handleAddIntake = () => {
     if (selectedBeverage && selectedAmount) {
-      const beverage = beverages.find(b => b.name === selectedBeverage);
+      const beverage = beverages.find((b) => b.name === selectedBeverage);
       const intake = selectedAmount * beverage.multiplier;
-      setRemaining(prev => Math.max(prev - intake, 0));
+      setRemaining((prev) => Math.max(prev - intake, 0));
     }
-  } 
+  };
 
-  const percentComplete = dailyGoal ? ((dailyGoal - remaining) / dailyGoal) * 100 : 0;
+  const percentComplete = dailyGoal
+    ? ((dailyGoal - remaining) / dailyGoal) * 100
+    : 0;
 
   return (
     <div className="MainContent">
       <h1>Hydration Tracker</h1>
       <p>
-        Staying hydrated is essential for maintaining good health. This simple hydration tracker helps you monitor your daily water intake and encourages you to drink enough water throughout the day. 
-        
-        Caffinated beverages like coffee and tea count towards your daily intake, but since they are diuretics, they only count as half their volume. For example, an 8 oz cup of coffee counts as 4 oz of water.
+        Staying hydrated is essential for maintaining good health. This simple
+        hydration tracker helps you monitor your daily water intake and
+        encourages you to drink enough water throughout the day. Caffinated
+        beverages like coffee and tea count towards your daily intake, but since
+        they are diuretics, they only count as half their volume. For example,
+        an 8 oz cup of coffee counts as 4 oz of water.
       </p>
-    
-      <div className="column" >
+
+      <div className="column">
         <h2>Set your Daily Goal</h2>
         <label>
           Weight (lbs):{" "}
@@ -68,11 +75,10 @@ function HydrationApp() {
             onChange={handleWeightChange}
             min="0"
           />
-
           Hydration Goal (oz):{" "}
           <input
             type="number"
-            value={weight/2}
+            value={weight / 2}
             onChange={handleWeightChange}
             min="0"
           />
@@ -103,32 +109,31 @@ function HydrationApp() {
         </label>
         <button onClick={handleAddIntake}>Hydrate</button>
         <h3>Daily Goal: {dailyGoal} oz</h3>
-        <h3>Remaining: {remaining} oz</h3>  
+        <h3>Remaining: {remaining} oz</h3>
       </div>
-      
-      <div className="progress-bar" style={{ width: '100%', backgroundColor: '#e0e0df', borderRadius: '13px', margin: '20px 0' }}>
+
+      <div
+        className="progress-bar"
+        style={{
+          width: "100%",
+          backgroundColor: "#e0e0df",
+          borderRadius: "13px",
+          margin: "20px 0",
+        }}
+      >
         <div
           className="progress-bar-fill"
           style={{
-            height: '20px',
+            height: "20px",
             width: `${percentComplete}%`,
-            backgroundColor: percentComplete >= 100 ? '#4caf50' : '#2196f3',
-            borderRadius: '13px',
-            transition: 'width 0.5s ease-in-out'
+            backgroundColor: percentComplete >= 100 ? "#4caf50" : "#2196f3",
+            borderRadius: "13px",
+            transition: "width 0.5s ease-in-out",
           }}
         ></div>
       </div>
-
-      
-      
-
-
     </div>
- );
+  );
 }
 
-export default HydrationApp;    
-
-
-
-        
+export default HydrationApp;

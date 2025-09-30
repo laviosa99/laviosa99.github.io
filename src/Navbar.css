@@ -1,29 +1,49 @@
-.Navbar {
-  width: 200px;
-  background-color: #eeceef;
-  height: 100vh;       /* full height */
-  position: fixed;     /* stays on the left */
-  top: 0;
-  left: 0;
-  padding: 20px;
-  box-sizing: border-box;
+/* Hamburger button */
+.menu-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: #79197e;
+  cursor: pointer;
+  z-index: 1001; 
 }
 
-.Navbar ul {
+/* Sidebar (hidden by default) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* slide in */
+}
+
+.sidebar ul {
   list-style: none;
   padding: 0;
 }
 
-.Navbar li {
-  margin-bottom: 15px;
+.sidebar li {
+  padding: 15px;
 }
 
-.Navbar a {
+.sidebar a {
+  color: white;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.Navbar a:hover {
-  color: #007bff;
+.sidebar a:hover {
+  text-decoration: underline;
 }

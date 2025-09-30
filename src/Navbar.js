@@ -1,17 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // optional for styling
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="Navbar">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/hobbies">Hobbies</Link></li>
-        <li><Link to="/hydration">Hydration App</Link></li>
-      </ul>
-    </nav>
+    <div>
+      {/* Hamburger button */}
+      <button onClick={() => setIsOpen(!isOpen)} className="menu-btn">
+        ☰
+      </button>
+
+      {/* Sidebar menu */}
+      <nav className={`sidebar ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/resume" onClick={() => setIsOpen(false)}>
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link to="/hobbies" onClick={() => setIsOpen(false)}>
+              Hobbies
+            </Link>
+          </li>
+          <li>
+            <Link to="/hydration" onClick={() => setIsOpen(false)}>
+              Hydration App
+            </Link>
+          </li>
+          <li>
+            <Link to="/gedanken" onClick={() => setIsOpen(false)}>
+              Cookbook Project
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
