@@ -1,6 +1,5 @@
 .App {
   display: flex;
-  background-color: #f9f0ff;
 }
 
 
@@ -11,7 +10,6 @@
 }
 
 .MainContent {
-  margin-left: 400px;  /* same as navbar width */
   padding: 60px;
   flex: 1;
   display: flex;
@@ -41,6 +39,8 @@ html, body, #root {
   margin: 0;
   padding: 0;
   background-color: #f9f0ff; /* light purple */
+  justify-content: center;
+  display: flex;
 }
 
 
