@@ -17,7 +17,6 @@
   align-items: center;
   justify-content: flex-start; /* top-aligned, change to center if you want vertical centering */
   text-align: center;
-  min-width: 700px; /* ensure it doesn't shrink too much */
   background-color: #f9f0ff;
 
 }
