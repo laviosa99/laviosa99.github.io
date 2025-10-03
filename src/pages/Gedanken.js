@@ -64,7 +64,7 @@ const edges = [
 
 function Gedanken() {
   return (
-    <div className="Paper">
+    <div className="MainContent">
       <h1>
         Gedanken Project: A Recipe For The Most Successful Cookbook in America
       </h1>
