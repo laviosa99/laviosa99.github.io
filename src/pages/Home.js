@@ -10,6 +10,7 @@ function contactLink(href, imgSrc, text) {
         display: "flex",
         flexWrap: "nowrap",
         marginRight: "15px",
+        height: "30px",
       }}
     >
       <img
@@ -36,7 +37,7 @@ function Home() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center", // or "space-between", "space-around"
-          marginBottom: "20px", // optional spacing below
+          height: "50px",
         }}
       >
         {contactLink(
