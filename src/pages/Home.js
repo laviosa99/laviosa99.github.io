@@ -38,6 +38,7 @@ function Home() {
           flexWrap: "wrap",
           justifyContent: "center", // or "space-between", "space-around"
           height: "50px",
+          marginBottom: "20px",
         }}
       >
         {contactLink(
