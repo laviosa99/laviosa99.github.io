@@ -26,18 +26,24 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/hobbies" onClick={() => setIsOpen(false)}>
-              Hobbies
+            <Link to="/projectA" onClick={() => setIsOpen(false)}>
+              Sentiment Classification
             </Link>
           </li>
+          <li>
+            <Link to="/gedanken" onClick={() => setIsOpen(false)}>
+              Cookbook Project
+            </Link>
+          </li>
+
           <li>
             <Link to="/hydration" onClick={() => setIsOpen(false)}>
               Hydration App
             </Link>
           </li>
           <li>
-            <Link to="/gedanken" onClick={() => setIsOpen(false)}>
-              Cookbook Project
+            <Link to="/hobbies" onClick={() => setIsOpen(false)}>
+              Hobbies
             </Link>
           </li>
         </ul>
