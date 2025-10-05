@@ -7,6 +7,7 @@ import Hobbies from "./pages/Hobbies";
 import Hydration from "./pages/Hydration";
 import Gedanken from "./pages/Gedanken";
 import ProjectA from "./pages/ProjectA";
+import ProjectB from "./pages/ProjectB";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/gedanken" element={<Gedanken />} />
           <Route path="/projectA" element={<ProjectA />} />
+          <Route path="/projectB" element={<ProjectB />} />
           <Route path="/hydration" element={<Hydration />} />
           <Route path="/hobbies" element={<Hobbies />} />
         </Routes>

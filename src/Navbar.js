@@ -31,6 +31,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/projectB" onClick={() => setIsOpen(false)}>
+              Movie Recommendation System
+            </Link>
+          </li>
+          <li>
             <Link to="/gedanken" onClick={() => setIsOpen(false)}>
               Cookbook Project
             </Link>
