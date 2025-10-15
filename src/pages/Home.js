@@ -53,7 +53,7 @@ function Home() {
           "LinkedIn"
         )}
 
-        {contactLink("https://github.com/laviosa9", "github.png", "Github")}
+        {contactLink("https://github.com/laviosa99", "github.png", "Github")}
       </div>
       <p>
         My name is Lavanya and I'm an engineer, baker, and plant-mom. I've just

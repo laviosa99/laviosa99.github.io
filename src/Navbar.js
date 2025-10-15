@@ -9,7 +9,7 @@ function Navbar() {
     <div>
       {/* Hamburger button */}
       <button onClick={() => setIsOpen(!isOpen)} className="menu-btn">
-        ☰
+        ☰ Menu
       </button>
 
       {/* Sidebar menu */}

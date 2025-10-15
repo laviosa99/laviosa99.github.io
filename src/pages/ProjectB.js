@@ -50,7 +50,7 @@ function ProjectB() {
       <p>
         <strong>SGD Model with α = 0</strong>{" "}
       </p>
-      <img src="ProjectBFigure1.png" />
+      <img src="ProjectBFigure1.png" alt="Trace plots for MAE vs Epoch with variable K." />
       <p>
         <strong>Figure 1:</strong> Trace plots for Mean Absolute Error (MAE) vs.
         Epoch when α = 0 for K = 2,10, 50 (left to right).
@@ -67,12 +67,12 @@ function ProjectB() {
         The number of epochs, batch size, and step size were adjusted to the
         final values listed above such that the training MAE showed convergence
         over the number of epochs for this
-        <strong>Stochastic Gradient Descent (SGD) model</strong>. Here, we
+        <strong> Stochastic Gradient Descent (SGD) model</strong>. Here, we
         varied the K parameter, which represents the number of factors or
         dimensions the model needs to learn per vector spae. As K increases,
         model complexity also increases. Each of the K values deomnstrated very
         similar MAEs, as evident in Figure 1.
-        <strong>Convergence behavior (around 0.94 MAE at epoch 50)</strong>
+        <strong> Convergence behavior (around 0.94 MAE at epoch 50)</strong>
         appears nearly identical for K = 2, 10, and 50. There also are no local
         minima for each of the plots and each looks convex. It is possible that
         the model is not complex enough for the data. There are no obvious signs
@@ -82,7 +82,7 @@ function ProjectB() {
       <p>
         <strong>SGD Model with L2 Regularization</strong>
       </p>
-      <img src="ProjectBFigure2.png" />
+      <img src="ProjectBFigure2.png" alt=""/>
       <p>
         <strong>Figure 2:</strong> Trace plot for MAE vs. Epoch when K = 50 with
         the best α of 5.26.
@@ -99,7 +99,7 @@ function ProjectB() {
         For SGD with K=50 with L2 regularization, the model was trained with
         varying levels of regularization strength, α, to assess the impact on
         convergence and validation error. We used{" "}
-        <strong>0 evenly-spaced values from 10e-6 to 100 for alpha.</strong> The
+        <strong>20 evenly-spaced values from 10e-6 to 100 for alpha.</strong> The
         model with the lowest validation error (0.938204 MAE) at the final epoch
         was selected as the <strong>‘best alpha’ with α=5.26.</strong>
       </p>
@@ -224,7 +224,7 @@ function ProjectB() {
       <p>
         <strong>Table 3: </strong>MAE of predictions by user gender.
       </p>
-      <img src="ProjectBTable3.png" />
+      <img src="ProjectBtable3.png" />
       <p>
         <strong>Table 4: </strong>MAE of predictions by user age.
       </p>
